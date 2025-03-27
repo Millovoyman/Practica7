@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main ()
+{
+    int a, b;
+    printf("Escribe un número: ");
+    scanf("%d", &a);
+    printf("Escribe otro número: ");
+    scanf("%d", &b);
+    if (a > b)
+    {
+        printf("a (%d) es mayor a b (%d).\n",a,b);
+        
+    }
+}
