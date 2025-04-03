@@ -1,33 +1,80 @@
 //Flores Mejía Emilio
 //Ejercicio 3
-#include <stdio.h>
 #include <math.h>
-void main()
+#include <stdio.h>
+
+int main()
 {
-    int op, num1, num2, res;
-    do
+    //Inicialización
+    int a = 0;
+    int b = 0;
+    int res = 0;
+    int op;
+
+    //Menu impreso
+    printf("Menu. \n");
+    printf("Escoge una opcion: \n");
+    printf("1.- Suma \n");
+    printf("2.- Resta \n");
+    printf("3.- Multiplicacion \n");
+    printf("4.- Division \n");
+    printf("0.- Salida \n");
+    printf("Dame la opcion: ");
+
+    //Pedir opción
+    scanf("%d", &op);
+
+    //condición
+    while(op != 0)
     {
-        printf("Menú: \n");
-        printf("Escoje una opción: \n")
-        printf("1.- suma\n");
-        printf("2.- resta\n");
-        printf("3.- multiplicación\n");
-        printf("4.- división\n");
-    }
-    while 
-    do
-    {
-        switch (op)
+        //Ingresar datos
+        printf("Ingrese primera cifra: ");
+        scanf("%d", &a);
+        printf("ingrese segunda cifra: ");
+        scanf("%d", &b);
+
+        //Seleccionar operación
+        if(op == 1)
         {
-            case 1:
-            printf("escribe el primer número: ");
-            scanf("%f, &num1");
-            printf("escribe el segundo número");
-            scanf("%f, &num2");
-            res = num1+num2;
-            break;
-            case 2;
+            res = a + b;
+        }
+        else
+        {
+            if (op == 2)
+            {
+                res = a - b;
+            }
+            else
+            {
+                if(op == 3)
+                {
+                    res = a * b;
+                }
+                else
+                {
+                    res = a / b;
+                }
+            }
             
         }
+
+        //Imprimir resultado
+        printf("El resultado es: %d \n", res);
+
+        //Regresar al menu
+        printf("Menu. \n");
+        printf("Escoge una opcion: \n");
+        printf("1.- Suma \n");
+        printf("2.- Resta \n");
+        printf("3.- Multiplicacion \n");
+        printf("4.- Division \n");
+        printf("0.- Salida \n");
+        printf("Dame la opcion: ");
+
+        //Pedir opción
+        scanf("%d", &op);
     }
+
+    //Terminar
+    return 0;
 }
